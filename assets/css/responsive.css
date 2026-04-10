@@ -1,0 +1,79 @@
+@media (max-width: 1100px) {
+  .hero,
+  .about-grid,
+  .skills-panel,
+  .project-grid,
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .section,
+  .site-footer {
+    width: min(calc(100% - 1.5rem), var(--max-width));
+  }
+
+  .section-inner {
+    width: min(calc(100% - 1.5rem), var(--max-width));
+  }
+
+  .site-nav {
+    padding: 1rem 0.75rem;
+  }
+
+  .nav-links,
+  .nav-resume {
+    display: none;
+  }
+
+  .section {
+    padding: 5.5rem 0;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 5.5rem;
+    padding-bottom: 6rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 12vw, 3.6rem);
+  }
+
+  .hero h2 {
+    font-size: clamp(1.2rem, 6vw, 1.75rem);
+  }
+
+  .hero-scroll {
+    bottom: 0.5rem;
+  }
+
+  .hero-actions,
+  .contact-actions,
+  .site-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .timeline {
+    padding-left: 1.8rem;
+  }
+
+  .timeline-dot {
+    left: -2.2rem;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
+}

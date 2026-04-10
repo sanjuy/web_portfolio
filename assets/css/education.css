@@ -1,0 +1,13 @@
+.education-card {
+  padding: 1.6rem;
+}
+
+.education-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.22rem;
+}
+
+.education-place {
+  color: var(--foreground);
+  font-weight: 600;
+}

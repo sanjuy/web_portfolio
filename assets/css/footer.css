@@ -1,0 +1,13 @@
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  padding: 2rem 0 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.footer-copy {
+  color: var(--muted);
+  font-size: 0.82rem;
+}

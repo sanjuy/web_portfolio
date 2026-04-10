@@ -1,0 +1,46 @@
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  padding: 1.6rem;
+}
+
+.project-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.22rem;
+}
+
+.project-meta {
+  display: flex;
+  gap: 0.55rem;
+  align-items: center;
+  margin-bottom: 0.9rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.project-meta-primary {
+  color: var(--primary);
+}
+
+.project-meta-accent {
+  color: var(--accent);
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--blue);
+  font-weight: 600;
+}

@@ -1,0 +1,133 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 4rem;
+}
+
+.about-grid h2,
+.section-copy h2,
+.contact-content h2 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(2.1rem, 4vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.about-grid p {
+  color: var(--foreground);
+}
+.text_color {
+  color: var(--foreground);
+  font-weight: 500;
+}
+
+.about-focus {
+  margin-top: 2rem;
+}
+
+.about-focus h3 {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  color: var(--foreground);
+}
+
+.about-focus,
+.about-focus h3,
+.about-list,
+.about-list li {
+  color: var(--foreground);
+}
+
+.about-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.0rem;
+}
+
+.about-list li {
+  line-height: 1.7;
+}
+
+.about-list li::marker {
+  color: var(--foreground);
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-card {
+  padding: 1.6rem;
+}
+
+.feature-card-wide {
+  grid-column: 1 / -1;
+}
+
+.feature-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.22rem;
+}
+
+.feature-card p {
+  margin: 0;
+  font-size: 0.96rem;
+  line-height: 1.7;
+}
+
+.feature-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.feature-icon svg {
+  width: 1.45rem;
+  height: 1.45rem;
+}
+
+.feature-icon-primary {
+  color: var(--primary);
+  background: rgba(122, 92, 255, 0.12);
+}
+
+.feature-icon-accent {
+  color: var(--accent);
+  background: rgba(255, 72, 176, 0.12);
+}
+
+.feature-icon-blue {
+  color: var(--blue);
+  background: rgba(73, 167, 255, 0.12);
+}
+
+.about-wide {
+  margin-top: 2rem;
+  padding: 1.75rem;
+  border: 1px solid var(--border);
+  background: var(--card);
+  backdrop-filter: blur(16px);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.about-wide h3 {
+  margin: 0 0 1rem;
+  font-size: 1.22rem;
+  color: var(--foreground);
+}
+
+.about-wide p {
+  color: var(--foreground);
+}
+
+.about-wide p + p {
+  margin-top: 1rem;
+}
