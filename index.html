@@ -10,47 +10,73 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
-    <div class="page-shell">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="page-shell" id="top">
       <div class="ambient ambient-left"></div>
       <div class="ambient ambient-right"></div>
 
-      <nav class="site-nav">
-        <a class="brand" href="#top">SANJU KUMAR</a>
+      <nav class="site-nav" aria-label="Primary">
+        <div class="nav-brand">
+          <a class="brand" href="#top">
+            <span class="brand-mark" aria-hidden="true">SK</span>
+            <span>Sanju Kumar</span>
+          </a>
+          <span class="nav-tagline">iOS and Flutter Developer</span>
+        </div>
 
-        <div class="nav-links">
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links" id="desktop-nav">
           <a href="#about">About Me</a>
           <a href="#skills">Skills</a>
           <a href="#learning">Learning</a>
           <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
+          <a href="#artifacts">Artifacts</a>
           <a href="#contact">Contact</a>
         </div>
 
         <a
           class="button button-outline button-small nav-resume"
-          href="./assets/files/resume.pdf"
-          download
+          href="mailto:kumar.sanju056@gmail.com?subject=Resume%20Request%20-%20Sanju%20Kumar"
         >
-          <span>Resume PDF</span>
+          <span>Request Resume</span>
           <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 3v12"></path>
-            <path d="M7 10l5 5 5-5"></path>
-            <path d="M5 21h14"></path>
+            <path d="M4 6h16v12H4z"></path>
+            <path d="M4 7l8 6 8-6"></path>
           </svg>
         </a>
       </nav>
 
-      <main id="top">
+      <div class="mobile-menu" id="mobile-menu" hidden>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#learning">Learning</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#artifacts">Artifacts</a>
+        <a href="#contact">Contact</a>
+        <a
+          href="mailto:kumar.sanju056@gmail.com?subject=Resume%20Request%20-%20Sanju%20Kumar"
+        >
+          Request Resume
+        </a>
+      </div>
+
+      <main id="main-content">
         <section class="hero section">
           <div class="hero-copy reveal">
             <div class="status-pill">
@@ -60,14 +86,11 @@
 
             <div class="hero-intro">
               <h1>Sanju Kumar</h1>
-              <h3>Building high-performance, AI-powered iOS and Flutter applications with modern, scalable architectures.</h3>
+              <h3>Senior iOS and Flutter Engineer delivering scalable mobile apps, architecture leadership, and reliable App Store and Play Store releases.</h3>
             </div>
 
             <p>
-              Senior Mobile Software Developer with <strong class="text_color">7+ years of experience</strong> in <strong class="text_color">iOS and Flutter</strong>, <strong class="text_color">leveraging AI-driven solutions and
-              modern architectures to build scalable</strong>, <strong class="text_color">high-performance applications</strong> using <strong class="text_color">microservices</strong> and <strong class="text_color">micro-component</strong> architectures. Skilled in integrating intelligent features,
-              optimizing user experiences, and delivering cross-platform products with clean, maintainable code. Proven expertise in
-              developing production-grade apps aligned with evolving technologies and industry best practices.
+              Mobile Software Developer with <strong class="text_color">7+ years of experience</strong> building and scaling <strong class="text_color">iOS and Flutter</strong> products across automotive, finance, media, and service domains. Delivered <strong class="text_color">15+ production apps</strong> with expertise in <strong class="text_color">Swift, Dart, clean architecture, performance optimization</strong>, and end-to-end delivery from requirements to store release.
             </p>
 
             <div class="hero-actions">
@@ -80,15 +103,13 @@
               </a>
               <a
                 class="button button-outline"
-                href="./assets/files/resume.pdf"
-                download
+                href="mailto:kumar.sanju056@gmail.com?subject=Resume%20Request%20-%20Sanju%20Kumar"
               >
                 <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 3v12"></path>
-                  <path d="M7 10l5 5 5-5"></path>
-                  <path d="M5 21h14"></path>
+                  <path d="M4 6h16v12H4z"></path>
+                  <path d="M4 7l8 6 8-6"></path>
                 </svg>
-                <span>Download Resume</span>
+                <span>Request Resume</span>
               </a>
             </div>
 
@@ -114,7 +135,7 @@
               <h2>Consultant</h2>
               <p>Cubastion Consulting Pvt Ltd</p>
               <div class="summary-meta">
-                <span>Nov 2022 - Present</span>
+                <span>Jul 2025 - Present</span>
                 <span>Gurugram, HR</span>
               </div>
             </div>
@@ -141,10 +162,10 @@
             </div>
           </aside>
 
-          <!-- <div class="hero-scroll">
+          <div class="hero-scroll" aria-hidden="true">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M6 9l6 6 6-6"></path>
-            </svg> -->
+            </svg>
           </div>
         </section>
 
@@ -153,30 +174,27 @@
             <div class="reveal">
               <h2>About Me</h2>
               <p>
-                I am a Senior Mobile Application Developer with 7+ years of
-                hands-on experience in building, architecting, and deploying
-                scalable mobile applications using iOS (Swift, Objective-C) and
-                Flutter (Dart).
+                Senior Mobile Application Developer with 7+ years of hands-on
+                experience designing, developing, and shipping production
+                applications using iOS (Swift, Objective-C) and Flutter (Dart).
               </p>
               <p>
-                My expertise lies in designing robust application architectures,
-                implementing efficient state management, and ensuring high
-                performance across diverse devices and platforms. I have
-                extensive experience in developing cross-platform applications
-                with Flutter as well as native iOS applications, allowing me to
-                choose the right approach based on product and performance
-                requirements.
+                Core strengths include mobile architecture, reusable component
+                design, API integration, CI/CD support, and performance tuning.
+                I build both native iOS and cross-platform Flutter solutions,
+                selecting the right stack based on product goals, timelines, and
+                scalability requirements.
               </p>
 
               <div class="about-focus">
                 <h3>What I Do</h3>
                 <ul class="about-list">
-                  <li>Architect and develop scalable, maintainable mobile applications</li>
-                  <li>Build reusable and modular components for faster development cycles</li>
-                  <li>Optimize app performance, responsiveness, and memory usage</li>
-                  <li>Integrate secure and efficient backend services</li>
-                  <li>Debug complex issues and ensure application stability in production</li>
-                  <li>Implement pixel-perfect UI based on modern design systems</li>
+                  <li>Lead end-to-end delivery of iOS and Flutter applications from planning to release</li>
+                  <li>Design clean, modular architectures (MVC, MVVM, VIPER, Clean Architecture)</li>
+                  <li>Build reusable components to accelerate development and reduce maintenance cost</li>
+                  <li>Optimize startup time, memory usage, and runtime performance for production stability</li>
+                  <li>Integrate REST APIs, WebSockets, Firebase, and third-party SDKs securely</li>
+                  <li>Mentor developers, drive code reviews, and improve engineering quality standards</li>
                 </ul>
               </div>
             </div>
@@ -191,8 +209,8 @@
                 </div>
                 <h3>Architecture</h3>
                 <p>
-                  Builds maintainable mobile apps with clean code, robust app
-                  structure, and practical delivery workflows.
+                  Defines scalable technical foundations with clean architecture,
+                  modular codebases, and maintainable engineering practices.
                 </p>
               </article>
 
@@ -205,8 +223,8 @@
                 </div>
                 <h3>Integrations</h3>
                 <p>
-                  Comfortable with REST APIs, WebSockets, Firebase services, and
-                  production app release pipelines.
+                  Delivers reliable integrations using REST APIs, WebSockets,
+                  Firebase, and third-party SDKs across iOS and Flutter apps.
                 </p>
               </article>
 
@@ -218,8 +236,8 @@
                 </div>
                 <h3>Delivery Mindset</h3>
                 <p>
-                  Leads projects, reviews code, mentors developers, and works
-                  across teams to ship on time to the App Store and Play Store.
+                  Partners with product, design, QA, and stakeholders to ship
+                  business-ready features on schedule with strong release quality.
                 </p>
               </article>
             </div>
@@ -228,16 +246,15 @@
           <div class="about-wide reveal">
             <h3>Engineering Approach</h3>
             <p>
-              I follow clean coding practices, write testable and maintainable
-              code, and emphasize code reviews, modularization, and
-              documentation. I focus on delivering high-quality applications
-              with strong attention to performance, security, and scalability.
+              I follow a product-focused engineering approach centered on clean
+              code, testability, and measurable delivery outcomes. I prioritize
+              performance, security, and maintainability to support long-term
+              product growth.
             </p>
             <p>
-              I am also experienced in working within Agile environments,
-              collaborating closely with cross-functional teams, and
-              contributing to the complete product lifecycle from requirement
-              analysis to deployment and post-release support.
+              Experienced in Agile delivery, sprint planning, code reviews, and
+              release management, with ownership across the full lifecycle:
+              requirements, implementation, deployment, monitoring, and support.
             </p>
           </div>
         </section>
@@ -247,8 +264,9 @@
             <div class="section-copy reveal">
               <h2>Skills</h2>
               <p>
-                The technical stack and delivery practices used across iOS and
-                Flutter product work.
+                ATS-aligned mobile engineering stack covering native iOS,
+                Flutter, architecture design, integrations, and release
+                operations.
               </p>
             </div>
 
@@ -366,7 +384,8 @@
             <div class="section-copy reveal">
               <h2>Learning</h2>
               <p>
-                Currently exploring and expanding knowledge in emerging technologies.
+                Continuous learning in AI and machine learning to build smarter,
+                data-driven mobile product experiences.
               </p>
             </div>
 
@@ -387,8 +406,9 @@
           <div class="section-copy reveal">
             <h2>Experience</h2>
             <p>
-              Roles focused on mobile architecture, delivery, store releases,
-              and collaboration with cross-functional teams.
+              Progressive leadership across iOS and Flutter roles, focused on
+              architecture decisions, production delivery, and mobile release
+              excellence.
             </p>
           </div>
 
@@ -401,16 +421,17 @@
               </h3>
               <div class="timeline-time">Jul 2025 - Present</div>
               <p>
-                As a Mobile Consultant, I design and architect scalable iOS and Flutter applications, ensuring high performance, clean
-                code, and maintainability.
+                Lead mobile consulting engagements for iOS and Flutter products,
+                driving architecture strategy, technical planning, and delivery.
               </p>
               <p>
-                I lead technical decisions, optimize app performance, and implement best practices across
-                development and deployment.
+                Translate business requirements into scalable technical
+                solutions, improve app performance, and enforce coding standards.
               </p>
               <p>
-                I collaborate closely with clients and cross-functional teams to deliver efficient,
-                business-focused solutions. Additionally, I manage CI/CD pipelines and ensure smooth, compliant app releases.
+                Partner with clients and cross-functional teams to deliver
+                release-ready features, including CI/CD and compliant store
+                submissions.
               </p>
             </article>
 
@@ -422,12 +443,13 @@
               </h3>
               <div class="timeline-time">Nov 2022 - Jun 2025</div>
               <p>
-                As a Senior Associate Consultant, I design and deliver scalable, high-performance mobile applications using iOS and
-                Flutter, contributing to robust architecture and sound technical decisions.
+                Delivered high-impact mobile applications using iOS and Flutter
+                for enterprise and consumer use cases.
               </p>
               <p>
-                I partner with stakeholders to translate business needs into efficient, maintainable solutions while upholding high standards of code quality. I drive
-                performance optimization and reliability, and support CI/CD, testing, and seamless app deployments.
+                Owned architecture, feature implementation, API integration, and
+                release execution while maintaining strong quality and
+                performance standards.
               </p>
             </article>
 
@@ -439,10 +461,10 @@
               </h3>
               <div class="timeline-time">May 2022 - Nov 2022</div>
               <p>
-                Wrote clean, efficient Swift code, integrated APIs, optimized
-                app performance, and implemented robust app architecture.
+                Built and optimized Swift-based financial application features,
+                integrated backend APIs, and improved production reliability.
               </p>
-              <p>Handled App Store release work as part of product delivery.</p>
+              <p>Managed App Store release activities, QA handover, and deployment readiness.</p>
             </article>
 
             <article class="timeline-item reveal">
@@ -453,10 +475,10 @@
               </h3>
               <div class="timeline-time">Jul 2020 - May 2022</div>
               <p>
-                Focused on clean Swift development, API integrations,
-                performance optimization, and sustainable mobile architecture.
+                Developed native iOS features with Swift, API integrations, and
+                scalable architecture patterns for production apps.
               </p>
-              <p>Delivered production apps and store releases.</p>
+              <p>Contributed to multiple production releases with focus on app quality and performance.</p>
             </article>
 
             <article class="timeline-item reveal">
@@ -467,8 +489,8 @@
               </h3>
               <div class="timeline-time">Apr 2019 - Mar 2020</div>
               <p>
-                Built and optimized iOS applications, integrated APIs, and
-                contributed to stable production-ready app architecture.
+                Built and enhanced iOS application modules, integrated APIs, and
+                supported stable production-ready releases.
               </p>
             </article>
 
@@ -480,8 +502,8 @@
               </h3>
               <div class="timeline-time">Mar 2018 - Apr 2019</div>
               <p>
-                Gained hands-on iOS development experience while working under
-                the guidance of senior developers.
+                Built core iOS development fundamentals in Swift, debugging,
+                version control, and collaborative delivery practices.
               </p>
             </article>
           </div>
@@ -491,8 +513,8 @@
           <div class="section-copy section-copy-centered reveal">
             <h2>Selected Projects</h2>
             <p>
-              Resume-based project work highlighting Flutter delivery and iOS
-              app development.
+              Delivered production-grade mobile solutions across iOS and Flutter
+              with strong focus on architecture, integrations, and release quality.
             </p>
           </div>
 
@@ -505,11 +527,12 @@
               </div>
               <h3>Kia Mysales</h3>
               <p>
-                The MySales app was built to digitize and optimize sales processes for better efficiency and decision-making. It
-                integrates multiple business modules such as lead management, reporting dashboards, and document access, ensuring
-                seamless communication between mobile clients and backend systems.
+                Built an enterprise iOS application to digitize automotive sales
+                workflows, including lead tracking, reporting dashboards, and
+                document management. Improved field-team productivity by
+                streamlining sales operations in a single mobile platform.
               </p>
-              <a class="project-link" href="mailto:kumar.sanju056@gmail.com" aria-disabled="true">
+              <a class="project-link" href="mailto:kumar.sanju056@gmail.com?subject=Project%20Demo%20Request%20-%20Kia%20Mysales">
                 App link available on request
               </a>
             </article>
@@ -522,12 +545,12 @@
               </div>
               <h3>AksharVishwa</h3>
               <p>
-                Developed a feature-rich news and e-paper mobile application using Flutter, providing users with real-time news updates
-                and digital newspaper access. Integrated WebView and PDF viewing for seamless reading experience across iOS and Android
-                platforms. Optimized performance and resolved platform-specific issues to ensure smooth app functionality. Delivered a
-                scalable and user-friendly solution aligned with App Store and Play Store guidelines.
+                Developed a Flutter news and e-paper application for iOS and
+                Android with real-time content delivery. Implemented WebView and
+                PDF rendering, resolved platform-specific issues, and delivered
+                stable releases aligned with App Store and Play Store standards.
               </p>
-              <a class="project-link" href="mailto:kumar.sanju056@gmail.com" aria-disabled="true">
+              <a class="project-link" href="mailto:kumar.sanju056@gmail.com?subject=Project%20Demo%20Request%20-%20AksharVishwa">
                 App link available on request
               </a>
             </article>
@@ -540,12 +563,12 @@
               </div>
               <h3>DSD Tab App</h3>
               <p>
-                A Flutter-based application designed for Mercedes-Benz service
-                advisors. It streamlines service management by providing
-                efficient tools for tracking, managing, and communicating with
-                customers during service appointments.
+                Delivered a Flutter tablet solution for automotive service
+                advisors to manage appointments, service workflows, and customer
+                communication. Improved operational visibility through a unified
+                service management interface.
               </p>
-              <a class="project-link" href="mailto:kumar.sanju056@gmail.com" aria-disabled="true">
+              <a class="project-link" href="mailto:kumar.sanju056@gmail.com?subject=Project%20Demo%20Request%20-%20DSD%20Tab%20App">
                 App link available on request
               </a>
             </article>
@@ -558,11 +581,12 @@
               </div>
               <h3>Voltas AC Services</h3>
               <p>
-                The Voltas Customer Service App is a Flutter-based mobile application designed to simplify and enhance the customer
-                experience for air conditioner servicing and maintenance. The application enables users to raise service requests,
-                schedule appointments, and track service status.
+                Built a Flutter customer service application enabling request
+                creation, appointment scheduling, and service-status tracking.
+                Enhanced service lifecycle transparency and user experience for
+                post-sales support workflows.
               </p>
-              <a class="project-link" href="mailto:kumar.sanju056@gmail.com" aria-disabled="true">
+              <a class="project-link" href="mailto:kumar.sanju056@gmail.com?subject=Project%20Demo%20Request%20-%20Voltas%20AC%20Services">
                 App link available on request
               </a>
             </article>
@@ -575,13 +599,12 @@
               </div>
               <h3>AiDash</h3>
               <p>
-                Developed the iOS application for AiDash, focused on hazard tree management for utility operations across the United
-                States. Built scalable and high-performance features using Swift, enabling data visualization and field
-                insights for risk assessment. Integrated APIs and optimized app performance to support large datasets and geospatial
-                workflows. Collaborated with cross-functional teams to deliver a reliable, production-ready solution for critical
-                infrastructure monitoring.
+                Developed high-performance iOS features for utility risk
+                monitoring and hazard tree management in the U.S. Implemented API
+                integrations, geospatial data workflows, and scalable data
+                visualization to support field operations and decision-making.
               </p>
-              <a class="project-link" href="mailto:kumar.sanju056@gmail.com" aria-disabled="true">
+              <a class="project-link" href="mailto:kumar.sanju056@gmail.com?subject=Project%20Demo%20Request%20-%20AiDash">
                 App link available on request
               </a>
             </article>
@@ -594,13 +617,96 @@
               </div>
               <h3>Madman</h3>
               <p>
-                An iOS application built to support financial mediation between
-                the seller and the buyer.
+                Built an iOS finance workflow application to support transaction
+                mediation between buyers and sellers with a reliable mobile user
+                experience.
               </p>
-              <a class="project-link" href="mailto:kumar.sanju056@gmail.com" aria-disabled="true">
+              <a class="project-link" href="mailto:kumar.sanju056@gmail.com?subject=Project%20Demo%20Request%20-%20Madman">
                 App link available on request
               </a>
             </article>
+          </div>
+        </section>
+
+        <section id="artifacts" class="section section-muted">
+          <div class="section-inner">
+            <div class="section-copy section-copy-centered reveal">
+              <h2>Sanitized Work Artifacts</h2>
+              <p>
+                Confidentiality-safe proof of delivery through anonymized
+                screenshots, architecture excerpts, and case-study summaries.
+              </p>
+            </div>
+
+            <div class="project-grid">
+              <article class="project-card reveal">
+                <div class="project-meta project-meta-primary">
+                  <span>Screenshots</span>
+                  <span>•</span>
+                  <span>Sanitized UI Flows</span>
+                </div>
+                <h3>Product Screens Collection</h3>
+                <p>
+                  Curated set of anonymized screenshots showing dashboard,
+                  workflow, and detail screens from enterprise and consumer
+                  mobile applications.
+                </p>
+                <a class="project-link" href="mailto:kumar.sanju056@gmail.com?subject=Request%20-%20Sanitized%20Screenshots">
+                  Request screenshot pack
+                </a>
+              </article>
+
+              <article class="project-card reveal">
+                <div class="project-meta project-meta-primary">
+                  <span>Architecture</span>
+                  <span>•</span>
+                  <span>System Design</span>
+                </div>
+                <h3>Architecture Snippets</h3>
+                <p>
+                  Annotated excerpts covering module boundaries, data flow, API
+                  layer design, and state management decisions for iOS and
+                  Flutter codebases.
+                </p>
+                <a class="project-link" href="mailto:kumar.sanju056@gmail.com?subject=Request%20-%20Architecture%20Snippets">
+                  Request architecture snippets
+                </a>
+              </article>
+
+              <article class="project-card reveal">
+                <div class="project-meta project-meta-accent">
+                  <span>Case Study</span>
+                  <span>•</span>
+                  <span>Anonymized</span>
+                </div>
+                <h3>Delivery Case Studies</h3>
+                <p>
+                  Short anonymized case studies with context, constraints,
+                  implementation approach, and measurable outcomes such as
+                  performance improvements and release stability.
+                </p>
+                <a class="project-link" href="mailto:kumar.sanju056@gmail.com?subject=Request%20-%20Anonymized%20Case%20Studies">
+                  Request case studies
+                </a>
+              </article>
+
+              <article class="project-card reveal">
+                <div class="project-meta project-meta-accent">
+                  <span>Demo</span>
+                  <span>•</span>
+                  <span>Public Equivalent</span>
+                </div>
+                <h3>Public Equivalent Demo</h3>
+                <p>
+                  Lightweight public demo that mirrors key architecture and UX
+                  patterns used in production apps, without exposing client IP
+                  or proprietary data.
+                </p>
+                <a class="project-link" href="mailto:kumar.sanju056@gmail.com?subject=Request%20-%20Public%20Equivalent%20Demo">
+                  Request demo walkthrough
+                </a>
+              </article>
+            </div>
           </div>
         </section>
 
@@ -623,8 +729,9 @@
           <div class="contact-content reveal">
             <h2>Let’s build the next mobile release.</h2>
             <p>
-              Available for iOS and Flutter opportunities involving product
-              delivery, architecture, integrations, and store releases.
+              Open to Senior iOS Developer, Flutter Developer, and Mobile
+              Architect opportunities focused on product delivery, performance,
+              and scalable app development.
             </p>
 
             <div class="contact-actions">
@@ -638,14 +745,12 @@
 
               <a
                 class="button button-outline button-large"
-                href="./assets/files/resume.pdf"
-                download
+                href="mailto:kumar.sanju056@gmail.com?subject=Resume%20Request%20-%20Sanju%20Kumar"
               >
-                <span>Download Resume</span>
+                <span>Request Resume</span>
                 <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 3v12"></path>
-                  <path d="M7 10l5 5 5-5"></path>
-                  <path d="M5 21h14"></path>
+                  <path d="M4 6h16v12H4z"></path>
+                  <path d="M4 7l8 6 8-6"></path>
                 </svg>
               </a>
             </div>
