@@ -11,6 +11,23 @@
   transform: translateY(0);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .status-dot,
+  .hero-scroll {
+    animation: none;
+  }
+}
+
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 rgba(54, 209, 125, 0.65);

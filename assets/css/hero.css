@@ -60,6 +60,15 @@
   max-width: 18ch;
 }
 
+.hero h3 {
+  margin: 0;
+  font-size: clamp(1.2rem, 2.1vw, 1.65rem);
+  line-height: 1.35;
+  font-weight: 500;
+  color: var(--foreground);
+  max-width: 30ch;
+}
+
 .hero p {
   max-width: 40rem;
   font-size: 1.12rem;
@@ -143,13 +152,20 @@
 }
 
 .hero-scroll {
-  position: absolute;
+  position: fixed;
   left: 50%;
   bottom: 1.25rem;
   transform: translateX(-50%);
   color: var(--muted);
   animation: bounce 1.8s infinite;
-  z-index: 3;
+  z-index: 40;
+  opacity: 1;
+  transition: opacity 200ms ease;
+}
+
+.hero-scroll.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .hero-scroll svg {
